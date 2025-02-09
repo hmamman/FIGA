@@ -1,3 +1,0 @@
-timestamp,approach_name,dataset_name,classifier_name,sensitive_name,tot_inputs,disc_inputs,disc_rate,total_generated,duplicates,duplication_rate,elapsed_time,time_to_1000_disc,egs
-2025-02-09 22:58:20,FIGA,census,RandomForestClassifier,sex,41055,32157,78.3266,49800,8745,17.56024096385542,300.5133879184723,24.312752962112427,107.00687986893956
-2025-02-09 23:03:20,FIGA,census,RandomForestClassifier,sex,77112,60813,78.8632,93600,16488,17.615384615384617,600.0377914905548,24.312752962112427,101.3486164745296
