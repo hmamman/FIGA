@@ -1,0 +1,3 @@
+timestamp,approach_name,dataset_name,classifier_name,sensitive_name,tot_inputs,disc_inputs,disc_rate,total_generated,duplicates,duplication_rate,elapsed_time,time_to_1000_disc,egs
+2025-02-09 22:38:27,FIGA,census,DecisionTreeClassifier,sex,819571,717659,87.5652,1000000,180429,18.0429,293.1586549282074,0.7031264305114746,2448.022556849805
+2025-02-09 22:43:25,FIGA,census,DecisionTreeClassifier,age,828610,817639,98.676,1000000,171390,17.139,291.75881576538086,0.5781247615814209,2802.4483094197503
