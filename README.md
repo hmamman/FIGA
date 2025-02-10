@@ -1,13 +1,13 @@
 # FIGA: Enhancing Individual Fairness Testing Through Feature Importance-Guided Genetic Algorithm
-**Authors**: _Hussaini Mamman, Shuib Basri, Abdullateef Oluwagbemiga Balogun, Abdul Rehman Gilal, Shamsudden Adamu, Aliyu Garba, and Luiz Fernando Capretz._
+**Experiments Source Code**
 
 ## Installation
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/hmamman/FIGA.git
-   cd FIGA
-   ```
+1. Download/Clone the repository:
+   ```bash
+   Download from: https://anonymous.4open.science/r/FIGA-7DA6/
+   Unzip and cd into the directory
+
 
 2. Create a virtual environment (optional but recommended):
    ```
@@ -19,7 +19,22 @@
    ```
    pip install -r requirements.txt
    ```
+## Datasets and Protected Attributes
+| Dataset | Protected Attribute | Index (Starts at 1) |
+|---------|---------------------|---------------------|
+| census  | sex                 | 9                   |
+|         | age                 | 1                   |
+|         | race                | 8                   |
+| credit  | sex                 | 9                   |
+|         | age                 | 13                  |
+| bank    | age                 | 1                   |
+|         | marital             | 3                   |
+| compas  | sex                 | 1                   |
+|         | age                 | 2                   |
+|         | race                | 3                   |
+| meps    | sex                 | 3                   |
 
+Dataset and protected attribute names are case-sensitive.
 
 ## Running Fairness Testing
 
@@ -30,7 +45,7 @@ The script accepts the following arguments:
 - `--dataset_name`: (string) Name of the dataset to use in the experiment. The default is `'census'`.
   - Example: `--dataset_name census`
 
-- `--sensitive_name`: (string) Name of the sensitive attribute for fairness testing (e.g., `sex`, `age`, `race`). The default is `'age'`.
+- `--sensitive_name`: (string) Name of the protected attribute for fairness testing (e.g., `sex`, `age`, `race`). The default is `'age'`.
   - Example: `--sensitive_name sex`
 
 - `--classifier_name`: (string) Name of the classifier to use (e.g., `mlp`, `dt`, `rf`, ect.). The default is `'dt'`.
@@ -43,7 +58,7 @@ The script accepts the following arguments:
 
 To run the FIGA framework:
 ```bash
-python python ./figa_tutorial/figa.py --classifier_name dt --dataset_name bank --sensitive_name age --max_allowed_time 3600
+python ./figa_tutorial/figa.py --classifier_name dt --dataset_name bank --sensitive_name age --max_allowed_time 3600
 ```
 
 To run a specific benchmarking approach included in this repository:
@@ -53,6 +68,6 @@ python ./baseline/expga/expga.py --classifier_name dt --dataset_name bank --sens
 
 You can also run all experiments for an approach (figa, expga, sg, and fairbs) using main.py file:
 ```bash
-python ./main.py --approach_name fairbs --max_allowed_time 3600  --max_iteration 5  
+python ./main.py --approach_name fairbs --max_allowed_time 3600 --max_iteration 5  
 ```
 
